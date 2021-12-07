@@ -63,7 +63,8 @@ const {
         
         <S.Newsletter>
             <h3>{contactTitle[3]}</h3>
-            <input></input>
+            <input placeholder="Email" />
+
             <button>{subscribe}</button>
             
         </S.Newsletter>

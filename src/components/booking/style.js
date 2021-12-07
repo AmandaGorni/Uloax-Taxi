@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 export const Title =styled.h1`
     text-align: center;
-    padding: 3rem;
+    width: 40%;
+    margin:auto;
+    padding: 4rem 0 1rem 0;
     font-size: 3.3rem;
-    :after{
-        content: "";
-        width: 1px;
-        height: 1px;
+    border-bottom: 1px solid grey;
+    @media (max-width: 966px) {
+        width: 80%;
+        font-size: 46px;
     }
 `
 
@@ -16,8 +18,9 @@ export const ContainerBook = styled.div`
    width: 73%;
    margin: 3rem auto;
    @media (max-width: 966px) {
-    width: 90%;
-
+        width: 90%!important;
+        flex-direction: column !important;
+        align-items: center !important;
   } 
 `
 export const Box = styled.div`  
@@ -29,6 +32,7 @@ export const Box = styled.div`
         font-weight: lighter;
         font-size: 1.2rem;
     }
+   
 `
 export const BtnBook = styled.button`
     color:#fff;
@@ -36,4 +40,11 @@ export const BtnBook = styled.button`
     width: 10rem;
     height: 3.3rem;
     font-size: 1.2rem;
+    cursor: pointer;
+    transition: 500ms ease-in-out;
+    
+    &:hover {
+        color:#f8ca11;
+        background-color: #000;
+    }
 `

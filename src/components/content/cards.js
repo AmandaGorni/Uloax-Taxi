@@ -1,5 +1,6 @@
 import React from 'react'
 import * as S from './style'
+import Carousel from 'nuka-carousel';
 
 import {graphql, useStaticQuery } from 'gatsby'
 
@@ -22,12 +23,13 @@ const data = useStaticQuery(graphql`
 
 const {titleCard, titlecar, textcar, carCard } = data.alldata.contents[0]
 
+
     return (
         <>
         <S.Container>
-            <h2>{titleCard}</h2>
-        
-        <S.Wrapper>
+            <h2>{titleCard.slice(0,4)}<span style={{color:"#f8ca11"}}>{titleCard.slice(4,8)}</span></h2>
+            
+        <S.Wrapper>           
             <S.BoxCard>
                 <S.Carbtn>01</S.Carbtn>
                 <h3>{titlecar[0]}</h3>
@@ -46,6 +48,7 @@ const {titleCard, titlecar, textcar, carCard } = data.alldata.contents[0]
                 <p>{textcar}</p>
                 <S.CarImg src={carCard.url} alt='Taxi'/>
             </S.BoxCard>
+           
         </S.Wrapper>
         </S.Container>
         </>

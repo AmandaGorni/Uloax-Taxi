@@ -50,6 +50,27 @@ export const Newsletter = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    input{
+    width: 100%;
+    font-size: 12pt;  
+    padding: 10px;
+    border-radius: 5px;
+    }
+    button{
+    width: 70%;
+    height: 50px;
+    font-size: 16pt;
+    color: #eceaea;
+    background-color: #fecf3d;
+    padding: 5px 0px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 5px;
+    &:hover{
+    color: #000;
+    transition: all 0.3s ease 0s;
+  }
+    }
 `
 export const LinkBox = styled.div`
     

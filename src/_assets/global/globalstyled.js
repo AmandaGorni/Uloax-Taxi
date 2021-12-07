@@ -15,10 +15,9 @@ body{
     font-family: 'Roboto', sans-serif;
     margin:auto;
     
+    
 }
-div{
-    /* border: 2px #fff solid; */
-}
+
 h3{
     font-size: 1.5rem;
     padding: 25px 0;

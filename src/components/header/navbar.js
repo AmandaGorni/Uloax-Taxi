@@ -22,17 +22,19 @@ export default function Header() {
 
     return (
         <S.Menu>
+            <S.MenuContainer>
             <figure>
                 <img src={logo.url} alt='Logotipo'/>
             </figure>
-            <nav>
+            <S.NavBox>
                 <S.NavList>
                     <S.NavItem>{navbar[0]}</S.NavItem>
                     <S.NavItem>{navbar[1]}</S.NavItem>
                     <S.NavItem>{navbar[2]}</S.NavItem>
                     <S.NavItem>{navbar[3]}</S.NavItem>
                 </S.NavList>
-            </nav>
+            </S.NavBox>
+            </S.MenuContainer>
         </S.Menu>
     )
 }

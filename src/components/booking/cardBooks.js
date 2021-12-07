@@ -26,7 +26,7 @@ const {title, subTitle, paragraph, btnBook, imgBook} = data.alldata.cardBooks[0]
 
     return(
         <>
-        <S.Title>{title}</S.Title>
+        <S.Title>{title.slice(0,8)}<span style={{color:"#f8ca11"}}>{title.slice(8,19)}</span></S.Title>
         <S.ContainerBook>
             <figure>
             <img src={imgBook[2].url} alt='wallet'/>

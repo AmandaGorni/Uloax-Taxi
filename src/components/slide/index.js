@@ -1,16 +1,15 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from 'nuka-carousel';
+
 import { graphql, useStaticQuery } from 'gatsby'
 import * as S from "./style";
 
 
 //EM PRODUÇÃO - TESTE
 
-export default function Slide() {
+export default function SimpleSlider() {
 
-const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query{
         alldata{
             slides {
@@ -26,83 +25,60 @@ const data = useStaticQuery(graphql`
     }
 `)
 
-const {
+  const {
     imgCar,
-    titleBook,
+    titlebook,
     city,
     partner,
     btnsearch
-} = data.alldata.slides[0]
+  } = data.alldata.slides[0]
 
-const settings = {
-    dots: true,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: "linear"
-  };
 
-    return (
-        <div>
-        <h2>Auto Play</h2>
-        <Slider {...settings}>
-        <section>
-        <div>
-          <h2>posicionamento</h2>
-          <p>posicionamento</p>
-        </div>
-        <img src={imgCar[0].url} alt="taxi" />
-      </section>
-      <section>
-        <h2>posicionamento</h2>
-        <div>
-          <p>posicionamento</p>
-          <input placeholder="PICKUP" />
-          <input placeholder="DROP" />
-          <input placeholder="WHEN" />
-          <button>{btnsearch}</button>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <h2>posicionamento</h2>
-          <p>posicionamento</p>
-        </div>
-        <img src={imgCar[1].url} alt="taxi" />
-      </section>
-      <section>
-        <h2>posicionamento</h2>
-        <div>
-          <p>posicionamento</p>
-          <input placeholder="PICKUP" />
-          <input placeholder="DROP" />
-          <input placeholder="WHEN" />
-          <button>{btnsearch}</button>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <h2>posicionamento</h2>
-          <p>posicionamento</p>
-        </div>
-        <img src={imgCar[0].url} alt="taxi" />
-      </section>
-      <section>
-        <h2>posicionamento</h2>
-        <div>
-          <p>{partner}</p>
-          <input placeholder="PICKUP" />
-          <input placeholder="DROP" />
-          <input placeholder="WHEN" />
-          <button>{btnsearch}</button>
-        </div>
-      </section>
-        </Slider>
-      </div>
-    )
+  const configCarousel = {
+    prevButtonStyle: {
+      display: "none"
+    },
+    nextButtonStyle:
+    {
+      display: "none"
+      
+    },
+    
+  }
+  return (
+    <>
+      <S.Display>
+        <S.DisplayContainer>
+          <S.DisplayBox>
+            <S.BookBox>
+            <S.Book>
+              <h2>{titlebook[0]}</h2>
+              <h2 style={{color: "#1a1a1a"}}>{titlebook[1]}</h2>
+            </S.Book>
+            </S.BookBox>
+            <Carousel
+              wrapAround
+              autoplay
+              autoplayInterval={4000}
+              defaultControlsConfig={configCarousel}
+            >
+              <S.ImgCar src={imgCar[0].url} alt="Taxi" />
+              <S.ImgCar src={imgCar[1].url} alt="Taxi" />
+            </Carousel>
+          </S.DisplayBox>
+          <S.Ride>
+            <h2>{city}</h2>
+            <S.Ridebox>
+              <h2>{partner}</h2>
+              <input type="text" Placeholder="PICKUP" />
+              <input type="text" Placeholder="DROP" />
+              <input type="text" Placeholder="WHEN" />
+              <button>{btnsearch}</button>
+            </S.Ridebox>
+          </S.Ride>
+        </S.DisplayContainer>
+      </S.Display>
+    </>
+  )
 }
+

@@ -17,7 +17,11 @@ export const Wrapper = styled.div`
     justify-content: space-around;
     max-width: 1060px;
     margin:auto;
-    
+    @media (max-width: 966px) {
+        flex-wrap: wrap;
+        
+    }
+   
 `
 export const BoxCard = styled.div`
     width: 27rem;
@@ -30,7 +34,12 @@ export const BoxCard = styled.div`
     text-align: center;
     position: relative;
     transition: .4s;
-
+    @media (max-width: 966px) {
+        margin-bottom: 70px;
+        height: 35rem;
+        
+    }
+    
     &:nth-child(-n+2){
     margin-right: 15px;
     }
@@ -46,6 +55,7 @@ export const BoxCard = styled.div`
       font-size: 20px;
       width: 50%;
   }
+ 
 `
 export const CarImg = styled.img`
     width: 88%;
