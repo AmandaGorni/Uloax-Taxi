@@ -7,13 +7,9 @@ export const Container = styled.section`
     margin:auto;
     padding: 50px;
     color: #fff;
-   
-    
 `
 export const Footer = styled.footer`
-    background-color: #292828;
-
-    
+    background-color: #292828;    
 `
 
 export const AddressBox = styled.address`
@@ -25,16 +21,22 @@ export const AddressBox = styled.address`
         line-height: 24px;
 
     }
+    @media (max-width: 966px) {
+        display:none;
+        
+    }
 `
+export const FollowBox = styled.div``
 
-export const FollowBox = styled.div`
-   
+export const LinkBox = styled.div`
+     @media (max-width: 966px) {
+        display:none;     
+    }
 `
 export const LinkList = styled.div`
     list-style-image: url(${props => props.logo});
     list-style-position: inside;
 `
-
 export const MidiaImg = styled.li`
     list-style-image: url(${props => props.logo});
     list-style-position: inside;
@@ -72,6 +74,4 @@ export const Newsletter = styled.div`
   }
     }
 `
-export const LinkBox = styled.div`
-    
-`
+

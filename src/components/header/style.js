@@ -24,8 +24,6 @@ export const NavList = styled.ul`
     justify-content: space-between;
     list-style: none;
     width: 100%;
-    
-    
     @media (max-width: 966px) {
     display: none;
   }    
@@ -38,10 +36,8 @@ export const NavItem = styled.li`
     line-height: 50px;
     text-align: center;
     margin-right: 8px;
-    font-size: 20px;
-    
-    cursor:pointer;
-    
+    font-size: 20px; 
+    cursor:pointer;   
     &:nth-child(4) {
         width: 10vw; 
     }

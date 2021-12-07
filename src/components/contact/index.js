@@ -43,11 +43,11 @@ const {
         <S.LinkBox>
             <h3>{contactTitle[1]}</h3>
             <S.LinkList>
-                <li>{links[0]}</li>
-                <li>{links[1]}</li>
-                <li>{links[2]}</li>
-                <li>{links[3]}</li>
-                <li>{links[4]}</li>
+                <S.MidiaImg logo={midiasImg[5].url}>{links[0]}</S.MidiaImg>
+                <S.MidiaImg logo={midiasImg[5].url}>{links[1]}</S.MidiaImg>
+                <S.MidiaImg logo={midiasImg[5].url}>{links[2]}</S.MidiaImg>
+                <S.MidiaImg logo={midiasImg[5].url}>{links[3]}</S.MidiaImg>
+                <S.MidiaImg logo={midiasImg[5].url}>{links[4]}</S.MidiaImg>
             </S.LinkList>
         </S.LinkBox>
         <S.FollowBox>
@@ -64,9 +64,7 @@ const {
         <S.Newsletter>
             <h3>{contactTitle[3]}</h3>
             <input placeholder="Email" />
-
-            <button>{subscribe}</button>
-            
+            <button>{subscribe}</button>          
         </S.Newsletter>
         </S.Container>
         </S.Footer>
