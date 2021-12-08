@@ -26,7 +26,7 @@ query{
 
     return (
         <>
-            <S.Title>{title.slice(0, 8)}<span style={{ color: "#f8ca11" }}>{title.slice(8, 19)}</span></S.Title>
+            <S.Title id="Booking">{title.slice(0, 8)}<span style={{ color: "#f8ca11" }}>{title.slice(8, 19)}</span></S.Title>
             <S.ContainerBook>
                 <figure>
                     <img src={imgBook[2].url} alt='wallet' />
@@ -77,7 +77,7 @@ query{
                     <S.BtnBook>{btnBook}</S.BtnBook>
                 </S.Box>
             </S.ContainerBook>
-            <S.AppBox backImg={imgBook[3].url}>
+            <S.AppBox backImg={imgBook[3].url} id="App">
                 <S.AppContainer>
                     <S.AppWrapper>
                         <S.AppText>

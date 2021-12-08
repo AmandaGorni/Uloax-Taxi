@@ -5,21 +5,23 @@ import styled from "styled-components";
 export const Display = styled.section`
     padding-top: 20vh;
     background-color: black;
-
 `
 export const DisplayContainer = styled.div`
     max-width:1440px;
     margin:auto;
     display: flex;
     justify-content:space-around;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
-
 export const DisplayBox =styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
-    @media (max-width: 966px) {
-        display:none;
+    @media (max-width: 1024px) {
+        width: 80%;
     }
 `
 export const Book =styled.div`
@@ -30,18 +32,19 @@ export const Book =styled.div`
     
     h2{
     width: 100%;
-    font-size: 2vw;
+    font-size: 30px;
     color: #fbfaf6;
     text-align: center;
+    }
+    @media (max-width: 1024px) {
+        width: 100%;    
     }
 `
 export const BookBox = styled.div`
     width: 100%;
     display: flex;
-    justify-content: right;
-    
+    justify-content: right;  
 `
-
 export const ImgCar = styled.img`
     max-width: 90%;
     height: auto;   
@@ -53,7 +56,7 @@ export const Ride = styled.div`
     text-align: center;
     width: 40%;
     color:#fff;
-    @media (max-width: 966px) {
+    @media (max-width: 1024px) {
         width: 80%;
         height: 80%;
     }

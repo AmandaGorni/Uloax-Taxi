@@ -47,7 +47,7 @@ export default function SimpleSlider() {
   }
   return (
     <>
-      <S.Display>
+      <S.Display id="Home">
         <S.DisplayContainer>
           <S.DisplayBox>
             <S.BookBox>

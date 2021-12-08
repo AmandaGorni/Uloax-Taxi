@@ -29,12 +29,13 @@ export const NavList = styled.ul`
   }    
 `
 
-export const NavItem = styled.li`
+export const NavItem = styled.a`
     color: #fff;
     height: 50px;
     width: 7vw;
     line-height: 50px;
     text-align: center;
+    text-decoration: none;
     margin-right: 8px;
     font-size: 20px; 
     cursor:pointer;   

@@ -26,7 +26,7 @@ const {titleCard, titlecar, textcar, carCard } = data.alldata.contents[0]
 
     return (
         <>
-        <S.Container>
+        <S.Container id="Taxi">
             <h2>{titleCard.slice(0,4)}<span style={{color:"#f8ca11"}}>{titleCard.slice(4,8)}</span></h2>
             
         <S.Wrapper>           

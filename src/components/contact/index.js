@@ -34,7 +34,7 @@ const {
 } = data.alldata.contacts[0]
 
     return(
-        <S.Footer>
+        <S.Footer id="Contact">
         <S.Container>
         <S.AddressBox>
             <h3>{contactTitle[0]}</h3>
@@ -43,11 +43,11 @@ const {
         <S.LinkBox>
             <h3>{contactTitle[1]}</h3>
             <S.LinkList>
-                <S.MidiaImg logo={midiasImg[5].url}>{links[0]}</S.MidiaImg>
-                <S.MidiaImg logo={midiasImg[5].url}>{links[1]}</S.MidiaImg>
-                <S.MidiaImg logo={midiasImg[5].url}>{links[2]}</S.MidiaImg>
-                <S.MidiaImg logo={midiasImg[5].url}>{links[3]}</S.MidiaImg>
-                <S.MidiaImg logo={midiasImg[5].url}>{links[4]}</S.MidiaImg>
+                <S.MidiaImg logo={midiasImg[5].url}><a href="#Home">{links[0]}</a></S.MidiaImg>
+                <S.MidiaImg logo={midiasImg[5].url}><a href="#Booking">{links[1]}</a></S.MidiaImg>
+                <S.MidiaImg logo={midiasImg[5].url}><a href="#Taxi">{links[2]}</a></S.MidiaImg>
+                <S.MidiaImg logo={midiasImg[5].url}><a href="#App">{links[3]}</a></S.MidiaImg>
+                <S.MidiaImg logo={midiasImg[5].url}><a href="#Contact">{links[4]}</a></S.MidiaImg>
             </S.LinkList>
         </S.LinkBox>
         <S.FollowBox>

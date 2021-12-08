@@ -33,7 +33,7 @@ export const LinkBox = styled.div`
         display:none;     
     }
 `
-export const LinkList = styled.div`
+export const LinkList = styled.nav`
     list-style-image: url(${props => props.logo});
     list-style-position: inside;
 `
@@ -42,6 +42,11 @@ export const MidiaImg = styled.li`
     list-style-position: inside;
     cursor: pointer;
     padding: 3px;
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    
     
 &:hover{
     color: #F8CA11;
@@ -52,8 +57,12 @@ export const Newsletter = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 500px) {
+        align-items: flex-end;
+    }
     input{
-    width: 100%;
+    width: 80%;
     font-size: 12pt;  
     padding: 10px;
     border-radius: 5px;
@@ -71,7 +80,8 @@ export const Newsletter = styled.div`
     &:hover{
     color: #000;
     transition: all 0.3s ease 0s;
-  }
+    }
+    @media (max-width: 500px) {
+        
     }
 `
-
