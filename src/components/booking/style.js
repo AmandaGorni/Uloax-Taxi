@@ -48,3 +48,55 @@ export const BtnBook = styled.button`
         background-color: #000;
     }
 `
+export const AppBox = styled.section`
+    width: 100%;
+    height: auto;
+    background: url(${props=> props.backImg}) no-repeat;
+    background-size:cover;
+    display: flex;  
+`
+export const AppContainer = styled.div`
+max-width: 1560px;
+width: 100%;
+height: 100%;
+margin:auto;
+`
+export const AppWrapper = styled.div`
+display: flex;
+justify-content: right;
+width: 100%;
+
+`
+export const AppText = styled.span`
+width: 60%;
+text-align: center;
+font-size: 30px;
+margin-top:52px;
+transition: 500ms ease-in-out;
+@media (max-width: 1064px){
+    margin-top: 20px;
+}
+h2{
+    &:nth-child(2){
+    color:#fff;
+    margin-top:22px;
+
+    }
+    @media (max-width: 1064px) {
+        font-size: 4vw;
+        width: 90%;
+        margin:auto;
+        border-radius: 5px;
+        color:#f8ca11;
+    }
+} 
+    
+`
+export const AppImg = styled.figure`
+width: 300px;
+img{
+    width: 100%;
+    height: 100%;
+}
+
+`
